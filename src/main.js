@@ -63,33 +63,39 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-const modal = document.getElementById("petModal");
-const modalContent = document.getElementById("modal-content");
-const modalCloseBtn = document.querySelector(".modal-close");
-
 function openPetModal(pet) {
-    modalContent.innerHTML = `
-        <div class="modal-pet-card">
-            <img src="${pet.image}" alt="${pet.name}" class="modal-pet-image">
-            <h2>${pet.name} ${pet.emoji}</h2>
-            <p><strong>Edad:</strong> ${pet.age}</p>
-            <p><strong>Raza:</strong> ${pet.breed}</p>
-            <p><strong>Descripción:</strong> ${pet.description}</p>
-            <p><strong>Características:</strong> ${pet.traits.join(", ")}</p>
-            <button class="modal-adopt-btn">¡Adóptame!</button>
+    // Crear modal
+    const modal = document.createElement("div");
+    modal.className = "modal";
+    modal.innerHTML = `
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-pet-card">
+                <img src="${pet.image}" alt="${pet.name}" class="modal-pet-image">
+                <h2>${pet.name} ${pet.emoji || ""}</h2>
+                <p><strong>Edad:</strong> ${pet.age}</p>
+                <p><strong>Raza:</strong> ${pet.breed}</p>
+                <p><strong>Descripción:</strong> ${pet.description}</p>
+                <p><strong>Características:</strong> ${pet.traits.join(", ")}</p>
+                <button class="modal-adopt-btn">¡Adóptame!</button>
+            </div>
         </div>
     `;
+
+    document.body.appendChild(modal);
+
+    // Cerrar modal al hacer click en la X
+    const closeBtn = modal.querySelector(".modal-close");
+    closeBtn.addEventListener("click", () => {
+        document.body.removeChild(modal);
+    });
+
+    // Cerrar modal al hacer click fuera del contenido
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            document.body.removeChild(modal);
+        }
+    });
+
     modal.style.display = "flex";
 }
-
-// Cerrar modal al hacer click en la X
-modalCloseBtn.addEventListener("click", () => {
-    modal.style.display = "none";
-});
-
-// Cerrar modal al hacer click fuera del contenido
-window.addEventListener("click", (e) => {
-    if (e.target === modal) {
-        modal.style.display = "none";
-    }
-});
