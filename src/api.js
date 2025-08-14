@@ -1,7 +1,6 @@
-// src/api.js
+const API_KEY_DOG = "live_TPQ67FP03m59ksEnlE1dpgryaCv2GjaIJrfCuJ63gK8NC2tTel5HB18riFJpEoHb";
+const API_KEY_CAT = "live_xHgkhv2GMFGe2VSPjKGN1PTL0cUIm6qXcmyfG4SaZAqAyixE0nnLnYZXRiwqIe05";
 
-const API_KEY_DOG = import.meta.env.VITE_API_KEY_DOG;
-const API_KEY_CAT = import.meta.env.VITE_API_KEY_CAT;
 
 export async function getDogs(limit = 25) {
     const url = `https://api.thedogapi.com/v1/images/search?limit=${limit}&has_breeds=1`;
