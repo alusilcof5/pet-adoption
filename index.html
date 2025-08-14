@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Surco Adopta | Adoptando cambiamos vidas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./public/css/style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <img src="./public/assets/logo.png" alt="Surco Adopta Logo">
+                </div>
+
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#mascotas">Mascotas</a></li>
+                <li><a href="#proceso">Proceso</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#adoptar" class="cta-nav">Adoptar ahora</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-container">
+            <h1>
+                <span class="hero-highlight">Adoptando</span><br>
+                cambiamos vidas
+            </h1>
+            <p class="hero-subtitle">
+                Conectamos familias amorosas con mascotas que necesitan un hogar.
+                Cada adopción es una segunda oportunidad para crear momentos inolvidables.
+            </p>
+            <div class="hero-cta">
+                <a href="#mascotas" class="btn-primary">Ver mascotas disponibles</a>
+                <a href="#proceso" class="btn-secondary">¿Cómo adoptar?</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pets Section -->
+    <section id="mascotas" class="pets-section">
+        <div class="section-header">
+            <h2 class="section-title">Encuentra tu compañero ideal</h2>
+            <p class="section-subtitle">
+                Cada mascota tiene su propia personalidad y está esperando conocer a su familia perfecta
+            </p>
+        </div>
+
+        <div class="pets-filter">
+            <button class="filter-btn" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="perros">Perros</button>
+            <button class="filter-btn" data-filter="gatos">Gatos</button>
+        </div>
+
+        <div class="pets-grid" id="pets-grid">
+            <!-- Las mascotas se cargarán dinámicamente -->
+             
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="proceso" class="process-section">
+        <div class="section-header">
+            <h2 class="section-title">Proceso de adopción</h2>
+            <p class="section-subtitle">
+                Un proceso sencillo diseñado para encontrar la mejor familia para cada mascota
+            </p>
+        </div>
+
+        <div class="process-steps">
+            <div class="process-step">
+                <div class="step-icon">
+                    <div class="step-number">1</div>
+                    💖
+                </div>
+                <h3 class="step-title">Encuentra tu mascota</h3>
+                <p class="step-description">Explora nuestro catálogo y conoce a las mascotas disponibles. Cada perfil
+                    incluye información detallada sobre su personalidad y necesidades.</p>
+            </div>
+
+            <div class="process-step">
+                <div class="step-icon">
+                    <div class="step-number">2</div>
+                    📝
+                </div>
+                <h3 class="step-title">Completa la solicitud</h3>
+                <p class="step-description">Llena nuestro formulario de adopción. Nos ayuda a entender tu estilo de vida
+                    para hacer la mejor combinación posible.</p>
+            </div>
+
+            <div class="process-step">
+                <div class="step-icon">
+                    <div class="step-number">3</div>
+                    🤝
+                </div>
+                <h3 class="step-title">Conoce a tu mascota</h3>
+                <p class="step-description">Programa una visita para conocer a tu futura mascota. Es importante que haya
+                    conexión mutua antes de continuar.</p>
+            </div>
+
+            <div class="process-step">
+                <div class="step-icon">
+                    <div class="step-number">4</div>
+                    🏠
+                </div>
+                <h3 class="step-title">Bienvenido a casa</h3>
+                <p class="step-description">¡Es oficial! Tu nueva mascota está lista para ir a casa. Te acompañamos
+                    durante los primeros días de adaptación.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    
+    <footer id="contacto" class="footer">
+
+        <div class="footer-container">
+            <img src="./public/assets/logo.png" class="logo-icon" alt="Surco Adopta Logo">
+
+            <div class="footer-logo">surco adopta</div>
+            <p class="footer-text">
+                Trabajamos cada día para crear conexiones especiales entre mascotas y familias,
+                construyendo un mundo donde ningún animal se quede sin hogar.
+            </p>
+
+            <div class="footer-social">
+                <a href="https://facebook.com" class="social-link" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://tiktok.com" class="social-link" target="_blank"><i class="fab fa-tiktok"></i></a>
+            </div>
+
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Surco Adopta. Todos los derechos reservados.</p>
+                <p>Este sitio es con objetivos academicos. No se recoge ningún tipo de datos </p>
+                <p> All cat-related content and images on this site are provided by
+        <a href="https://www.thecatapi.com/" target="_blank" rel="noopener noreferrer">TheCatAPI</a> and
+        <a href="https://www.thedogapi.com/" target="_blank" rel="noopener noreferrer">TheogAPI</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="petModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div id="modal-content"></div>
+        </div>
+    </div>
+
+    <script type="module" src="./src/main.js"></script>
+</body>
+
+</html>
