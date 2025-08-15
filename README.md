@@ -30,6 +30,12 @@ El sitio permite a los usuarios:
 - Diseño responsivo y accesible.  
 - Footer con información de contacto y enlaces a redes sociales.  
 
+## DEMO
+
+![Alt text](./public/assets/pets.gif)
+<img src="./public/assets/pets-movil.gif" alt="Alt text" width="120">
+
+
 ## Tecnologías
 
 - **Frontend:** HTML5, CSS3, JavaScript (ES6+)  
